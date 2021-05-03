@@ -1,6 +1,4 @@
 import string
-import random
-import math
 import sys
 import secrets
 
@@ -24,12 +22,11 @@ if size <= 0:
     sys.exit(0)
 
 haslo = ''
-5
+
 for i in range(size):
     k = secrets.choice(chars)
     print(k)
     haslo += k
-
 
 print(haslo)
     
