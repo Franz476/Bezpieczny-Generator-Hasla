@@ -1,7 +1,12 @@
 import string
 import sys
 import secrets
+import os
 
+desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
+sciezka = str(desktop) + '\\' + 'Hasła.txt'
+
+target = input ('Do czego potrzebujesz hasła? ')
 size = int(input('Wprowadź długość hasła: '))
 chars = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
 print(chars)
@@ -28,5 +33,10 @@ for i in range(size):
     #print(k)
     haslo += k
 
-print(haslo)
-    
+line = haslo + '                 ' + target + '\n'
+
+#print(desktop)
+print(sciezka)
+print(line)
+file = open(sciezka, 'a+')
+file.write(line)
