@@ -25,7 +25,7 @@ haslo = ''
 
 for i in range(size):
     k = secrets.choice(chars)
-    print(k)
+    #print(k)
     haslo += k
 
 print(haslo)
